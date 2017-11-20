@@ -5,6 +5,15 @@
 @import 'navbar';
 @import 'post';
 
+p img {
+  padding: 5px 10px;
+  box-shadow: unset;
+  -webkit-box-shadow: unset;
+  -moz-box-shadow: unset;
+  -o-box-shadow: unset;
+  -ms-box-shadow: unset;
+}
+
 #header_wrap .inner {
   padding-bottom: 5px;
 }
