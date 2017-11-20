@@ -3,4 +3,6 @@ title: Home
 permalink: index.html
 layout: default
 ---
-<h2>Welcome to Glorken's World!</h2>
+# Welcome to Glorken's World!
+
+This is my home, I guess.

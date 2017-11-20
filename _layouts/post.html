@@ -26,15 +26,19 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-          {{ page.title }}<wbr>
-          <span class="byline" title="{{page.date}}">
-            Posted&nbsp;{{ page.date | date_to_long_string | replace:" ","&nbsp;" }}&nbsp;by&nbsp;{{ page.author | replace:" ","&nbsp;" }}
-          </span>
-        </h1>
-        {{ content }}
-      </section>
+      <div id="main_content" class="inner">
+        <article>
+          <h1 id="post_header">
+            {{ page.title }}<wbr>
+            <span class="byline" title="{{page.date}}">Posted&nbsp;{{ page.date | date_to_long_string | replace:" ","&nbsp;" }}&nbsp;by&nbsp;{{ page.author | replace:" ","&nbsp;" }}</span>
+          </h1>
+          {{ content }}
+        </article>
+        <section class="post-navigator">
+          {% if page.previous %}<span><a href="{{ site.baseurl }}{{ page.previous.url }}">Previous Page: {{ page.previous.title }}</a></span>{% endif %}
+          {% if page.next %}<span><a href="{{ site.baseurl }}{{ page.next.url }}">Next Page: {{ page.next.title }}</a></span>{% endif %}
+        </section>
+      </div>
     </div>
 
     <!-- FOOTER  -->
